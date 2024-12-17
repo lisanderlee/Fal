@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Chat from "./components/Chat";
 import ImageGrid from "./components/ImageGrid";
 import { ImageSettings } from './types/image';
+import CreditUsage from './components/CreditUsage';
 
 export default function Home() {
   const [selectedPrompt, setSelectedPrompt] = useState('');
@@ -21,7 +22,8 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen relative">
+      <CreditUsage />
       <div className="grid grid-cols-1 md:grid-cols-2 h-full">
         <div className="h-screen overflow-y-auto border-r dark:border-gray-700">
           <Chat 
